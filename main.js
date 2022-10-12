@@ -1,20 +1,24 @@
 addEventListener("DOMContentLoaded", (e)=>{
 
     /* 
-    Ejercicio 1
-        Determinar si un número es positivo y menor que 100
+    Ejercicio 2
+        Calcule el mayor de tres números, permitiendo leer 3 valores diferentes
     */
-    
-        let num
-    
-        num = Number(prompt("Ingrese un número"))
-    
-        if(num > 0 && num < 100){
-            alert(`${num} es positivo y menor que 100`)
-        }
-        else{
-            alert(`${num} es negativo o mayor que 100`)
-        }
-    
-    
+
+    let num1, num2,num3
+
+    num1 = Number(prompt("Ingrese un número"))
+    num2 = Number(prompt("Ingrese un número"))
+    num3 = Number(prompt("Ingrese un número"))
+
+    if(num1 > num2 && num1 > num3){
+        alert(`${num1} es mayor que ${num2} y ${num3}`)
+    }
+    else if(num2 > num1 && num2 > num3){
+        alert(`${num2} es mayor que ${num1} y ${num3}`)
+    }    
+    else if(num3 > num2 && num3 > num1){
+        alert(`${num3} es mayor que ${num1} y ${num2}`)
+    }
+
 });
