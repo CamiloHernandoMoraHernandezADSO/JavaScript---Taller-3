@@ -1,24 +1,21 @@
 addEventListener("DOMContentLoaded", (e)=>{
 
 /* 
-Ejercicio 6
-    Considere dos variables llamadas temperatura y presión. Escriba una sentencia if-else que muestre
-    en pantalla la palabra Alarma si la variable presión es mayor a 200 o si la variable temperatura es
-    mayor a 100. En caso contrario, se debe mostrar en pantalla la palabra Normal.
+Ejercicio 7
+    Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
+    $130.000 el descuento será del 15%, de lo contrario no hay descuento
 */
 
-let temperatura, presion
+let totalPagos
 
-presion = Number(prompt("Ingrese el valor de la presion"))
-temperatura = Number(prompt("Ingrese el valor de la temperatura."))
+totalPagos = Number(prompt("Ingrese el total de los gastos"))
 
-if(presion > 200 || temperatura > 100){
-    alert("Alerta")
+if(totalPagos > 130000){
+    totalPago = totalPagos - totalPagos * 0.15
+    alert(`El total a pagar es ${totalPago}`)
 }
 else{
-    alert("Normal")
+    alert(`El total a pagar es ${totalPagos}`)     
 }
-
-
 
 });
