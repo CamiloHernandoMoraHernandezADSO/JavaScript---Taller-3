@@ -1,21 +1,24 @@
 addEventListener("DOMContentLoaded", (e)=>{
-
 /* 
-Ejercicio 7
-    Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-    $130.000 el descuento será del 15%, de lo contrario no hay descuento
+Ejercicio 8
+    En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
+    la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
+    a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.
 */
 
-let totalPagos
+let rol, horas,valHoras, pago
 
-totalPagos = Number(prompt("Ingrese el total de los gastos"))
+rol = prompt("Ingrese el rol del empleado")
+horas = Number(prompt("Ingrese la cantidad de horas trabajadas"))
 
-if(totalPagos > 130000){
-    totalPago = totalPagos - totalPagos * 0.15
-    alert(`El total a pagar es ${totalPago}`)
+if(rol.toUpperCase() == "PLANTA"){
+    valHoras = 20000
+    pago = valHoras * horas
 }
-else{
-    alert(`El total a pagar es ${totalPagos}`)     
-}
+else if(rol.toUpperCase() == "ADMINISTRATIVO"){
+    valHoras = 10000
+    pago = valHoras * horas
 
+}
+alert(`Su pago es de ${pago}`)
 });
