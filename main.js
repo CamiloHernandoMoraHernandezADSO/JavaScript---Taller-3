@@ -1,24 +1,25 @@
 addEventListener("DOMContentLoaded", (e)=>{
+
 /* 
-Ejercicio 8
-    En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
-    la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
-    a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.
+Ejercicio 9
+    Realizar el algoritmo que lea N números, calcule y escriba la suma de los pares y el producto de los
+    impares. Numero par es aquel que su residuo igual a cero (num mod !=0)
 */
 
-let rol, horas,valHoras, pago
+let cantidad, sumaPar=0, sumaImpar=0, i, num
 
-rol = prompt("Ingrese el rol del empleado")
-horas = Number(prompt("Ingrese la cantidad de horas trabajadas"))
+cantidad = Number(prompt("Ingrese la cantidad de números a ingresar"))
 
-if(rol.toUpperCase() == "PLANTA"){
-    valHoras = 20000
-    pago = valHoras * horas
+for(i=0; i < cantidad;i++){
+
+    num = Number(prompt("Ingrese un numero"))
+    if(num%2 == 0){
+        sumaPar += num
+    }
+    else{
+        sumaImpar += num
+    }
 }
-else if(rol.toUpperCase() == "ADMINISTRATIVO"){
-    valHoras = 10000
-    pago = valHoras * horas
+alert(`La suma de los pares de ${sumaPar} \n La suma de los impares es de ${sumaImpar}`)
 
-}
-alert(`Su pago es de ${pago}`)
 });
