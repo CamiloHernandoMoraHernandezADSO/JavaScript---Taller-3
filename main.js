@@ -1,25 +1,21 @@
 addEventListener("DOMContentLoaded", (e)=>{
-
 /* 
-Ejercicio 9
-    Realizar el algoritmo que lea N números, calcule y escriba la suma de los pares y el producto de los
-    impares. Numero par es aquel que su residuo igual a cero (num mod !=0)
+Ejercicio 10
+    Calcular el valor total del valor de 5 productos, el IVA y el subtotal, visualizar los resultados de:
+    Iva, Subtotal y Total de la compra de los artículos
 */
 
-let cantidad, sumaPar=0, sumaImpar=0, i, num
+let p1, p2,p3,p4,p5, iva, subtotal,total
 
-cantidad = Number(prompt("Ingrese la cantidad de números a ingresar"))
+p1 = Number(prompt("Ingrese el valor producto 1"))
+p2 = Number(prompt("Ingrese el valor producto 2"))
+p3 = Number(prompt("Ingrese el valor producto 3"))
+p4 = Number(prompt("Ingrese el valor producto 4"))
+p5 = Number(prompt("Ingrese el valor producto 5"))
+iva = 0.5
+subtotal = p1 + p2 + p3 + p4 + p5
+total = subtotal + subtotal*iva
 
-for(i=0; i < cantidad;i++){
-
-    num = Number(prompt("Ingrese un numero"))
-    if(num%2 == 0){
-        sumaPar += num
-    }
-    else{
-        sumaImpar += num
-    }
-}
-alert(`La suma de los pares de ${sumaPar} \n La suma de los impares es de ${sumaImpar}`)
+alert(`IVA: ${iva*10}% \nSubtotal: ${subtotal} \nTotal: ${total}`)
 
 });
