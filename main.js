@@ -1,30 +1,31 @@
 addEventListener("DOMContentLoaded", (e)=>{
 
 /* 
-Ejercicio 3
-    Desarrollar un diagrama que lea 3 valores diferentes e indique cual es el mayor de ellos, el menor o
-    si son iguales.
+Ejercicio 4.
+    Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
+    ¿Qué figura quiere calcular (Escriba T o C)?
+    Triangulo = base * altura / 2
+    Circulo = PI * radio* radio
 */
 
-let num1, num2,num3
+    let area, figura, base, altura, radio
 
-if(num1 > num2 && num1 > num3){
-    alert(`${num1} es mayor que ${num2} y ${num3}`)
-}else if(num1 < num2 && num1 < num3){
-    alert(`${num1} es menor que ${num2} y ${num3}`)
-}
-if(num2 > num1 && num2 > num3){
-    alert(`${num2} es mayor que ${num1} y ${num3}`)
-}else if(num2 < num1 && num2 < num3){
-    alert(`${num2} es menor que ${num1} y ${num3}`)
-}
-if(num3 > num2 && num3 > num1){
-    alert(`${num3} es mayor que ${num1} y ${num2}`)
-}else if(num3 < num2 && num3 < num1){
-    alert(`${num3} es menor que ${num1} y ${num2}`)
-}
-if(num1 == num2 || num1 == num3 || num2 == num3){
-    alert(`Hay números iguales`)
-}
 
+    figura = prompt("Elija una figura (T o C)")
+    figura = figura.toUpperCase()
+    if (figura == "T"){
+        base = Number(prompt("Escriba la base del triángulo"))
+        altura = Number(prompt("Escriba la altura del triángulo"))
+        area = base * altura / 2
+    }
+    else if(figura == "C"){
+        radio = Number(prompt("Ingrese el radio del círculo"))
+        area = Math.PI * radio ** 2
+    }
+    else{
+        area = 0
+        figura = "0"
+        alert("Elija una opción válida")
+    }
+    alert(`El área del ${figura} es ${area}`)
 });
