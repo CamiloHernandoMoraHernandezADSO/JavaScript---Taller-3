@@ -1,20 +1,17 @@
 addEventListener("DOMContentLoaded", (e)=>{
 /* 
-Ejercicio 11
-    Programa para solicitar el nombre, apellido, edad y la nota promedio de 5 estudiantes de un curso de computación
+Ejercicio 12
+    Restarle al primer número al segundo (siempre y cuando el primero sea mayor que él segundo, en
+    caso contrario indicar con un mensaje que la operación no es posible realizarla.
 */
 
-let nombre, apellido,edad,nota,promedio,i
+let num1, num2
 
-for(i=0;i < 5;i++){
-    nombre = prompt("Ingrese su nombre")
-    apellido = prompt("Ingrese su apellido")
-    edad = Number(prompt("Ingrese su edad"))
-    nota = Number(prompt("Ingrese su nota"))
-    promedio += nota
+if(num1 > num2){
+    suma = num1 - num2
+    alert(`La suma de los números es ${suma}`)
 }
-promedio = promedio / 5
-
-alert(`La nota promedio del curso es ${promedio}`) 
-
+else{
+    alert(`La operación no es posible.`)
+}
 });
